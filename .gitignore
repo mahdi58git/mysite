@@ -5,7 +5,8 @@ __pycache__/
 .idea
 # C extensions
 *.so
-
+blog/migrations/
+web_app/migrations/
 # Distribution / packaging
 .Python
 build/
