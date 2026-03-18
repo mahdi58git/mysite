@@ -63,13 +63,9 @@
 				          <li><a href="{% url 'web_app:home' %}">Home</a></li>
 				          <li><a href="{% url 'web_app:about' %}">About</a></li>
 				          <li class="menu-has-children"><a href="">Blog</a>
-				            <ul>
-				              <li><a href="{% url 'blog:blog' %}">Blog Home</a></li>
-				              <li><a href="{% url 'blog:blogsingle' %}">Blog Single</a></li>
-				            </ul>
-				          </li>
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
+                          <li class="menu-has-children"><a href="">Pages</a>
+                          <li><a href="{% url 'blog:blog' %}">Blog</a></li>
+                            <ul>
 				            	  <li><a href="elements.html">Elements</a></li>
 						          <li class="menu-has-children"><a href="">Level 2 </a>
 						            <ul>
