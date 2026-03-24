@@ -11,3 +11,6 @@ def blog_single(request, id):
     post = get_object_or_404(posts,pk=id)
     context = {'posts':post}
     return render(request, 'blog-single.html',context)
+
+def test (request):
+    return render(request, 'test.html')
