@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{#{% include 'blog/single_post.html' %}#}
+{% load humanize %}
 {% load blog_tags %}
 {% block content %}
 <!-- start banner Area -->
@@ -109,7 +109,7 @@
                                 <p class="date col-lg-12 col-md-12 col-6"><a
                                         href="#">{{ post.published_date|date:"d/M/Y" }}</a> <span
                                         class="lnr lnr-calendar-full"></span></p>
-                                <p class="view col-lg-12 col-md-12 col-6"><a href="#">{{ post.counted_views }}
+                                <p class="view col-lg-12 col-md-12 col-6"><a href="#">{{ post.counted_views | intword }}
                                     Views</a> <span class="lnr lnr-eye"></span></p>
                                 <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span
                                         class="lnr lnr-bubble"></span></p>
