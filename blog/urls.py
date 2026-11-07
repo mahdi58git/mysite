@@ -5,9 +5,10 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', blog_home, name='blog'),
-    path('/<int:id>',blog_single, name='single'),
-    path('/catgories/<str:cat_name>',blog_home,name='catgories'),
-    path('/author/<str:author>',blog_home,name='author'),
-    path('/search/',search,name='search'),
+    path('/<int:id>', blog_single, name='single'),
+    path('/catgories/<str:cat_name>', blog_home, name='catgories'),
+    path('/tags/<str:tag_name>', blog_home, name='tag'),
+    path('/author/<str:author>', blog_home, name='author'),
+    path('/search/', search, name='search'),
     path('/test', test, name='test'),
 ]

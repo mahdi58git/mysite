@@ -24,7 +24,7 @@ from web_app.sitemaps import StaticViewSitemap
 from web_app import views
 from blog.sitemaps import BlogSitemap
 import  debug_toolbar
-app_name = 'web_app'
+
 
 sitemaps = {
     "static": StaticViewSitemap,
@@ -43,6 +43,7 @@ urlpatterns = [
     ),
     path('robot.txt',include("robots.urls")),
     path('__debug__/', include(debug_toolbar.urls)),
+    path('captcha/',include('captcha.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

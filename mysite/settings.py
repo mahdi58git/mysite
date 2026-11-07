@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-(7jonh6jlq8_jpb%4=q9rdv^t+fjfrj0zb%ozk9=mjmc8!d4n5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -43,7 +44,9 @@ INSTALLED_APPS = [
     'web_app.apps.TestInTestConfig',
     'blog.apps.BlogConfig',
     'robots',
-    'debug_toolbar'
+    'debug_toolbar',
+    "taggit",
+    "captcha",
 
 ]
 SITE_ID = 2
@@ -134,6 +137,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-INTERNAL_IPS=[
+INTERNAL_IPS = [
     '127.0.0.1'
 ]
+
+
